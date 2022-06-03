@@ -2,6 +2,7 @@ const getCocktailData =
     async function() {
   const response =
       await fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+      // await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=m')
   if (response.status == 200) {
     let cocktailAttributes = await response.json();
     cocktailAttributes.drinks.forEach(element => {
